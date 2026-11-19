@@ -1,1 +1,12 @@
 .rulf-row { display: flex; align-items: center; gap: 8px; margin: 4px 0; }
+
+/* Лечит перенос слов посреди слова (word-break: break-all и т.п. из темы/Custom CSS) */
+body.rulf-css-fix #chat .mes_text,
+body.rulf-css-fix #chat .mes_text * {
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    hyphens: manual !important;
+    -webkit-hyphens: manual !important;
+    line-break: auto !important;
+}
